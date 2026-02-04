@@ -13,6 +13,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Active navigation link on scroll
+
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-link');
 
@@ -188,6 +189,14 @@ if (galleryDisplay) {
             if (prevBtn) prevBtn.click();
         }
     }
+
+
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.getElementById('navLinks');
+
+    menuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+    });
 }
 
 // Optional: Auto-play gallery (uncomment to enable)
